@@ -18,7 +18,8 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "mingw32-make",
+            // "command": "mingw32-make",
+            "command": "make",
             "args": []
         },
         {
