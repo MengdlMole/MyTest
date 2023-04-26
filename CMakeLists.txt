@@ -3,14 +3,18 @@ set(CMAKE_SYSTEM_NAME "Linux")
 cmake_minimum_required(VERSION 3.0)
 project(MyTest)
 
+set(CMAKE_BUILD_TYPE "debug")
+add_definitions(-std=c++17)
+
 if(CMAKE_SYSTEM_NAME MATCHES "Windows")
-set(CMAKE_C_COMPILER "C:/MyProgram/Code/Environments/MinGW/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/bin/gcc")
-set(CMAKE_CXX_COMPILER "C:/MyProgram/Code/Environments/MinGW/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/bin/g++")
+    set(CMAKE_CXX_COMPILER "C:/MyProgram/Code/Environments/MinGW/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/bin/g++")
+    set(CMAKE_C_COMPILER "C:/MyProgram/Code/Environments/MinGW/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/bin/gcc")
 elseif(CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(CMAKE_C_COMPILER "/usr/bin/gcc")
     set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 else()
 endif()
+
 
 aux_source_directory(${PROJECT_SOURCE_DIR}/MyTest DIR_MAIN_SRCS)
 aux_source_directory(${PROJECT_SOURCE_DIR}/source/bookstore DIR_WIN_SRCS)
