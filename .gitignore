@@ -1,3 +1,7 @@
-./build
-./tools
-./doc
+./build/
+./tools/
+./doc/
+
+!./build/.gitkeep
+!./tools/.gitkeep
+!./doc/.gitkeep
