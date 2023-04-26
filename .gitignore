@@ -1,7 +1,10 @@
-./build/
-./tools/
-./doc/
+!.vscode
+!.gitignore
 
-!./build/.gitkeep
-!./tools/.gitkeep
-!./doc/.gitkeep
+build/
+tools/
+doc/
+
+!build/.gitkeep
+!tools/.gitkeep
+!doc/.gitkeep
